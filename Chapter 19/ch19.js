@@ -1,9 +1,5 @@
-let days = ["Monday", "Tuesday", "Wednesday",
-    "Thursday", "Friday"
-];
-let weather = ["Sunny", "Partly sunny", "Partly cloudy",
-    "Cloudy", "Rainning", "Snowing", "Thunderstorm", "Foggy"
-];
+let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+let weather = ["Sunny", "Partly Sunny", "Partly Cloudy", "Cloudy", "Raining", "Snowing", "Thunderstorm", "Foggy"];
 
 let maxTemp = 110;
 let minTemp = 32;
@@ -12,8 +8,8 @@ let lemonadeCost = 0.5;
 
 let dailyTemp = [];
 
-document.getElementById("OpenTheStand")
-    .addEventListener("click", openTheStand);
+document.getElementById("OpenTheStand").addEventListener("click", openTheStand);
+
 
 generateWeather();
 
@@ -26,10 +22,7 @@ function generateWeather() {
         tempToday = Math.floor(Math.random()
             * (maxTemp - minTemp) + minTemp)
         dailyTemp[i] = tempToday
-        document.getElementById("5DayWeather").innerHTML
-            += "<div id= '" + "'><b>Forecast for " + days[i] +
-            ":</b><br><br>" + weatherToday + " and " + tempToday +
-            " degrees.</div>";
+        document.getElementById("5DayWeather").innerHTML += "<div id= '" + days[i] + "' class='" + weatherToday + "'><b>Forecast for " + days[i] + ":</b><br><br>" + weatherToday + " and " + tempToday + " degrees.</div>";
     }
 }
 
